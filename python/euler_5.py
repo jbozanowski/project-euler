@@ -20,4 +20,4 @@ def euler_5():
         i += 1
 
 if __name__ == '__main__':
-    print euler_5()
+    assert euler_5() == 232792560
