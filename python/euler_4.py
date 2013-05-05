@@ -15,4 +15,4 @@ def euler_4():
 
 
 if __name__ == '__main__':
-    print euler_4()
+    assert euler_4() == 906609
