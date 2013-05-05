@@ -23,4 +23,4 @@ def euler_3():
 
 
 if __name__ == '__main__':
-    print euler_3()
+    assert euler_3() == 6857
