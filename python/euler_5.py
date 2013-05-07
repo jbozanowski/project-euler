@@ -2,10 +2,10 @@
 
 
 def euler_5():
-    DIVISORS_END = 20
-    START = DIVISORS_END ** 2
+    HIGHEST_DIVISOR = 20
+    START = HIGHEST_DIVISOR
     STOP = 99999999999999 # arbitrary
-    divisors = range(1, DIVISORS_END+1)
+    divisors = range(HIGHEST_DIVISOR-1, 1, -1)
 
     def _is_evenly_divisible(x):
         for i in divisors:
@@ -17,7 +17,8 @@ def euler_5():
     while i < STOP:
         if _is_evenly_divisible(i):
             return i
-        i += 1
+        i += HIGHEST_DIVISOR
+
 
 if __name__ == '__main__':
     assert euler_5() == 232792560
