@@ -26,4 +26,4 @@ def euler_7():
 
 
 if __name__ == '__main__':
-    print euler_7()
+    assert euler_7() == 104723
