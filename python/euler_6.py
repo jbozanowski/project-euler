@@ -13,4 +13,4 @@ def euler_6():
 
 
 if __name__ == '__main__':
-    print euler_6()
+    assert euler_6() == 25164150
