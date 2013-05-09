@@ -21,6 +21,7 @@ NUMBER = """73167176531330624919225119674426574742355349194934
             84580156166097919133875499200524063689912560717606
             05886116467109405077541002256983155200055935729725
             71636269561882670428252483600823257530420752963450"""
+NUMBER = ''.join(NUMBER.split())
 NUM_DIGITS = 5
 
 
@@ -29,8 +30,7 @@ def euler_8():
         for i in xrange(0, len(iterable)):
             yield iterable[i:i+group_size]
 
-    s = ''.join(NUMBER.split())
-    groups = _split_into_groups(s, NUM_DIGITS)
+    groups = _split_into_groups(NUMBER, NUM_DIGITS)
     mul = lambda x, y: x * y
     products = [reduce(mul, map(int, group)) for group in groups]
     return max(map(int, products))
