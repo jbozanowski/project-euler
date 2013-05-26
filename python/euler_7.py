@@ -21,15 +21,12 @@ def euler_7():
 
     prime_count = 0
     PRIME_COUNT_TARGET = 10001
-    i = 0
     LIMIT = 9999999999999 # arbitrary
-    while i < LIMIT:
+    for i in xrange(LIMIT):
         if _is_prime(i):
-            #print '%d - a prime!' % (i, )
             prime_count += 1
             if prime_count == PRIME_COUNT_TARGET:
                 return i
-        i += 1
 
 
 if __name__ == '__main__':
