@@ -7,23 +7,16 @@
 
 # What is the 10 001st prime number?
 
-
-from math import sqrt
+from common import is_prime
 
 
 def euler_7():
-    def _is_prime(x):
-        limit = int(round(sqrt(x)))
-        for i in xrange(2, limit+1):
-            if x % i == 0:
-                return False
-        return True
 
     prime_count = 0
     PRIME_COUNT_TARGET = 10001
     LIMIT = 9999999999999 # arbitrary
     for i in xrange(LIMIT):
-        if _is_prime(i):
+        if is_prime(i):
             prime_count += 1
             if prime_count == PRIME_COUNT_TARGET:
                 return i
